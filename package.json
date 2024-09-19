@@ -1,0 +1,23 @@
+{
+  "name": "lesson29-assignment04",
+  "version": "1.0.0",
+  "description": "intro to node",
+  "main": "step1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RalphsCode/Lesson29-Assignment04.git"
+  },
+  "keywords": [
+    "node",
+    "JS"
+  ],
+  "author": "RalphsCode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RalphsCode/Lesson29-Assignment04/issues"
+  },
+  "homepage": "https://github.com/RalphsCode/Lesson29-Assignment04#readme"
+}
