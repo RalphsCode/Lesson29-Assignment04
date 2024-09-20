@@ -48,7 +48,14 @@ if (args[2] == '--out') {
     else {
         cat(args[4])
         .then (data => {
-        console.log(data)
+            fs.writeFile(args[3], data, "utf8", function(err) {
+                if (err) {
+                  console.error(err);
+                  process.exit(1);
+                }
+                console.log('Successfully wrote to file!');
+              });
+              ;
     } )
     } }
 
