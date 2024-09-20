@@ -32,14 +32,21 @@ async function webcat(url) {
 // Call the relevant function
 
 if (args[2] == '--out') {
-    if (args[3].includes('http') ) {  // arg includes http
-        webcat(args[3])
+    if (args[4].includes('http') ) {  // arg includes http
+        webcat(args[4])
         .then(data => {
-            console.log(data);
+            fs.writeFile(args[3], data, "utf8", function(err) {
+                if (err) {
+                  console.error(err);
+                  process.exit(1);
+                }
+                console.log('Successfully wrote to file!');
+              });
+              ;
         })
         }
     else {
-        cat(args[3])
+        cat(args[4])
         .then (data => {
         console.log(data)
     } )
