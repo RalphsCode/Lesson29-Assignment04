@@ -32,10 +32,20 @@ async function webcat(url) {
 // Call the relevant function
 
 if (args[2] == '--out') {
-        content =  123     
-}
+    if (args[3].includes('http') ) {  // arg includes http
+        webcat(args[3])
+        .then(data => {
+            console.log(data);
+        })
+        }
+    else {
+        cat(args[3])
+        .then (data => {
+        console.log(data)
+    } )
+    } }
 
-if (args[2].includes('http') ) {  // arg includes http
+else if (args[2].includes('http') ) {  // arg includes http
     webcat(args[2])
     .then (data => {
         console.log(data);
